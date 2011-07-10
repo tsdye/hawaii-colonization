@@ -1,0 +1,48 @@
+# -*- mode: org -*-
+
+This directory holds the colonization.org file, which is a plain text
+Org-mode document that contains the research project that resulted in
+the paper "A Model-based Age Estimate for Polynesian Colonization of
+Hawai`i" published in the journal Archaeology in Oceania.
+
+The following instructions can be used to generate a
+viewable pdf version of this document.  The generation process
+involves evaluating the source code blocks embedded in colonization.org,
+performing the relevant calculations, and generating the referenced
+figures.
+
+1. Install the latest version of emacs "Emacs 24" from
+   http://savannah.gnu.org/projects/emacs
+
+2. Ensure that a working installation of LaTeX is available on your
+   system.  See [[http://www.ctan.org/]]
+
+3. Ensure that the following executable is installed on your system
+   and in your $PATH
+   - R [[http://www.r-project.org/]]
+
+4. Emacs Speaks Statistics (ESS) provides support for communication
+   between Emacs and a persistent R process. To install ESS download
+   the source code from http://ess.r-project.org/ -- this paper was
+   tested with version 5.13.  Unpack the download into a directory on
+   your machine, and update the `ess-path' variable on the second line
+   of init.el in this directory to point to your local ess/lisp/
+   directory.
+
+5. Alternatively, follow steps 6 through 9 or call make from within
+   the directory that holds colonization.org.
+
+6. From the command line, cd into the directory that holds colonization.org
+   and then launch Emacs using the following command
+   
+   : emacs -Q -l init.el colonization.org
+
+7. The resulting Emacs window will be visiting the Org-mode file,
+   colonization.org.  From here it is possible to navigate and edit the
+   document, and to inspect and evaluate source code blocks.
+
+8. Export the document to LaTeX with the M-x org-export-as-latex
+   command---just press RET in reply to queries from R.
+
+9. The resulting colonization.tex file can be built from the command line
+   with pdflatex and bibtex.

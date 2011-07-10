@@ -1,0 +1,1732 @@
+#+TITLE:     A Model-based Age Estimate for Polynesian Colonization of Hawai`i
+#+AUTHOR:    Thomas S. Dye
+#+EMAIL:     tsd@tsdye2.com
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:t ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:   
+#+LINK_HOME: 
+#+XSLT: 
+#+STARTUP: overview
+#+FILETAGS: RESEARCH
+#+STYLE: <link rel="stylesheet" type="text/css" href="http://www.tsdye.com/tsd.css" /> 
+#+LaTeX_CLASS: koma-article
+#+LaTeX_CLASS_OPTIONS: [listof=flat,letterpaper,11pt,abstract=true]
+#+LaTeX_HEADER: \usepackage[AUTO]{inputenc}
+#+LaTeX_HEADER: \usepackage[T1]{fontenc} 
+#+LaTeX_HEADER: \usepackage[scaled]{beraserif}
+#+LaTeX_HEADER: \usepackage[scaled]{berasans} 
+#+LaTeX_HEADER: \usepackage[scaled]{beramono}
+#+LaTeX_HEADER: \usepackage[style=authoryear-comp,natbib=true]{biblatex}
+#+LaTeX_HEADER: \bibliography{colonization}
+#+LaTeX_HEADER: \usepackage{graphicx}
+#+LaTeX_HEADER: \setcounter{tocdepth}{1}
+#+LaTeX_HEADER: \setcounter{secnumdepth}{1}
+#+LaTeX_HEADER: \usepackage{microtype}
+#+LaTeX_HEADER: \newcommand{\rc}{\ensuremath{^{14}}{C}}
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \let\description\compactdesc
+#+LaTeX_HEADER: \let\itemize\compactitem
+#+LaTeX_HEADER: \let\latin\textit
+#+LaTeX_HEADER: \usepackage{textcomp}
+#+LaTeX_HEADER: \usepackage{tabularx}
+#+LaTeX_HEADER: \usepackage[x11names]{xcolor}
+#+LaTeX_HEADER: \usepackage[colorlinks=true,urlcolor=SteelBlue4,linkcolor=Firebrick4,citecolor=Green4]{hyperref}
+    
+#+BEGIN_abstract
+A model-based Bayesian calibration using \rc\space data from
+paleoenvironmental cores and materials introduced to the islands by
+Polynesian colonists estimates that the islands were likely colonized
+sometime late in the first millennium AD.  Two calibrations, one using
+\rc\space dates on floral materials and the other using \rc\space
+dates on floral and faunal materials, indicate that archaeological
+materials yield relatively imprecise estimates of the colonization
+event with 95% highest posterior density regions 3-5 centuries long.
+Materials introduced to the islands by Polynesians date to two
+periods, one that coincides with the colonization event, and another
+some 3-6 centuries later.  A disparity between colonization
+and the first reliably dated archaeological evidence of human activity
+is identified and estimated to be 1-4 centuries long.
+
+#+END_abstract
+
+#+LATEX: \tableofcontents
+#+LATEX: \listoffigures
+#+LATEX: \listoftables
+
+* Introduction
+
+In the sixty years since an unexpectedly old age estimate was returned
+by the first \rc\space date from Hawai`i
+[[citep:libby51:_radioc_dates_ii]], archaeologists have used \rc\space
+dating evidence to estimate when Polynesians first colonized the
+islands.  Initially, the \rc\space method was seen as a precise
+scientific replacement for the settlement dates derived from
+traditional histories, which relied on genealogical information and
+estimates of the average length of a generation to calculate when
+Polynesians colonized the islands.  Somewhat surprisingly, the use of
+\rc\space dating evidence has failed to yield a precise estimate.  In
+fact, over time, it has produced a wider range of settlement estimates
+than genealogical dating with all its vagaries.  Published estimates
+based on \rc\space data now range from the beginning of the common era
+[[citep:hunt-holsen91]] to the thirteenth century AD
+[[citep:wilmshurst11:_high_east_polyn]].  Much of this variability is due
+to Hawaiian archaeologists' uncritical use of the \rc\space method, in
+particular the on-going and explicable failure to control for the
+effects of old wood [[citep:dye00:_effec, dye10:_age_o18_site_hawaii]].
+Another important source of variability is the ad hoc methods used to
+interpret \rc\space dates when estimating the colonization event.  A
+model-based Bayesian approach is proposed here as a solution to this
+persistent problem.
+
+* A Brief Review of Ad Hoc Age Estimates for Polynesian Colonization
+
+Archaeologists have developed three different approaches to estimating
+when Polynesians colonized Hawai`i.  These include a search for early
+sites, evaluations of lists of \rc\space dates compiled from site
+excavation reports, and evaluations of \rc\space dates from
+paleoenvironmental investigations.  All of these approaches have been
+implemented in an ad hoc way, without benefit of an explicit
+chronological model.
+
+Early \rc\space -based estimates of Polynesian colonization of Hawai`i
+were framed in the context of arguments for the ages of purportedly
+early sites.  Arguments for an early establishment of three coastal
+sites were made, including: Pu`u Ali`i, Site H1
+[[citep:emory69:age_of_sites]]; Bellows, Site O18
+[[citep:pearson71:_bellows]]; and the H\=alawa Valley Dune, Site
+MO-A1-3 [[citep:kirch-kelly75:halawa]], which was interpreted as
+somewhat later than the other two.  At each of the three sites
+artifactual or structural evidence was found that differed from
+expectations based on the known ethnographic and museum records and
+which was interpreted as indicating some antiquity for the site: at
+Pu`u Ali`i this was a multi-faceted sequence of change in various
+types of fishing gear [[citep:emory68:_fishhooks]]; at Bellows an
+artifact assemblage with an unusual shell coconut grater, pearl shell
+fishhooks, and adzes with trapezoidal and triangular cross sections
+[[citep:pearson71:_bellows]]; and at H\=alawa Valley, a buried
+round-ended house, untanged and ground adzes, and various early
+fishhook types [[citep:kirch-kelly75:halawa]].
+
+The early age estimate for each of these sites was subsequently
+challenged.  [[citet:dye92]] showed that the argument for an early
+date at H1 was based on outliers among the dated samples and used an
+analysis of cumulative probability curves to
+argue for a much later fifteenth century date for establishment of the
+site.  The O18 site was re-dated twice.  The first attempt yielded
+somewhat equivocal results, which were interpreted as indicating a
+later establishment of the site in the eighth century AD
+[[citep:tuggle01:_age_bellow_dune_site_o18]].  The second attempt
+yielded a stratigraphically consistent set of results that compare
+favorably with other well-dated sites nearby and indicate that the
+site was established in AD 1040-1219, some nine centuries later than
+the earliest estimate of its age [[citep:dye10:_age_o18_site_hawaii]].
+Six new AMS dates from contexts near the base of the H\=alawa Dune
+site clearly indicate that the original basis for early settlement
+there was an outlier, probably due to the old wood effect.  The site
+is now believed to have been established in the fifteenth century AD
+[[citep:kirch07:_recon_hawaiian_cultur_sequen]].
+
+This situation led in the 1990s to development of an approach to
+estimating the date of Polynesian colonization that doesn't rely on
+identifying an early site.  In this approach, a corpus of \rc\space
+dates is assembled, the dates are calibrated, and the early tail of
+the temporal distribution of the calibrated ages is used to estimate
+the age of colonization.  This is the approach used by
+[[citet:hunt-holsen91]] and [[citet:graves95:_polyn_settl_of_hawaiian_archip]]
+to argue that Hawai`i was discovered by Polynesians in the first to
+fifth centuries AD.  At the time, this early colonization date
+appeared to be supported by the colonization sequence in the Eastern
+Polynesian homeland of Hawai`i, but subsequent \rc\space dating of
+purportedly early sites there that controlled for the
+effects of old wood
+[[citep:rolett95:_renew_inves_haatuat_dune_nukuh_marques_islan,anderson02:_new_radioc_ages_colon_sites_east_polyn,wilmshurst08:_datin_polyn_new_zealan_pacif]]
+has shown that the colonization sequence as it was understood in the
+early 1990s was several centuries too early.  As a result, the
+estimated colonization ages for Hawai`i based on corpora of \rc\space
+dates were recognized as implausibly early.  In response to this
+situation, [[citet*:wilmshurst11:_high_east_polyn]] have developed a set
+of criteria for accepting or rejecting individual \rc\space dates, an
+approach known in the Pacific as "chronometric hygiene"
+[[citep:spriggs-anderson93]], and have applied this to the problem of
+estimating the colonization dates of island groups in East Polynesia,
+including Hawai`i.  Using a substantially reduced corpus of
+\rc\space dates, this approach yields an estimate that Polynesian
+colonization of Hawai`i took place in AD 1219--1266.
+
+A second response to the lack of early dated sites was to look outside
+of archaeological sites for information that might be used to infer
+when colonization took place.  Prominent examples of this approach
+include [[citet:burney01:_fossil_eviden_for_diver_biota]] and
+[[citep:athens02:_avifaun_extin_veget_chang_and]]. This approach yielded
+especially useful results on the `Ewa Plain of O`ahu island, where
+paleoenvironmental coring in Ordy Pond revealed a stratigraphic
+sequence of thin layers, each of which represents a short interval of
+time, and excavations in limestone sinkholes yielded apparently old
+materials introduced to the islands by Polynesians.  Dates on
+materials from the pre-colonization and post-colonization periods were
+interpreted as supporting a settlement range of AD 700-800 [[citep:athens02:_avifaun_extin_veget_chang_and][57, n. 1]].
+The model-based approach outlined below builds on this approach to
+propose a solution to the problem of when Hawai`i was colonized by
+Polynesians.
+
+* Advantages of a Model-based Approach
+The theory and practice of Bayesian calibration for the archaeologist
+have been fully explicated by [[citet*:buck96]] and the interested reader
+is enthusiastically referred to that volume for an in-depth treatment
+of the topic.  In what follows the Bayesian approach to calibration is
+summarized to draw out the contrast with ad hoc approaches in general,
+and the approach used most recently by
+[[citet:wilmshurst11:_high_east_polyn]] in particular.
+
+The archaeologist carrying out a Bayesian calibration has two tasks:
+build a model that specifies the temporal relations among the events
+of interest and incorporates any prior information on their ages, and
+identify and collect dating information that fit into the model.  The
+calibration itself, carried out in software such as BCal [[citep:bcal]] or
+OxCal [[citep:ramsey95:oxcal]], uses the model to constrain the values
+assigned to the calibrated ages of the samples during a probabilistic
+resampling process that is designed to converge on the result that
+would be obtained through direct analysis by a skilled statistician.
+
+It is important to note that the Bayesian calibration doesn't test the
+model in any meaningful sense.  Rather, Bayesian
+calibration takes the model as a given set of facts and reports back
+the best estimates of model parameters--the ages of archaeological
+events of interest--in the light of the data collected for the model.
+Bayesian model-building isn't an exercise in speculation or
+imagination so much as it is an assessment of what is known about a
+set of archaeological events and their relations to one another.
+Typically, this assessment is based on excavation data where apt field
+procedures ensure that archaeological events are identified and the
+laws of stratification [[citep:harris89:_princ_archaeol_strat]],
+conscientiously applied, provide the basis for ordering them
+temporally.  The model need not have its basis in a stratigraphic
+sequence, however, and all that is required is a clear statement about
+the archaeological events of interest and their temporal relations to
+one another.  When dating information is properly fit into a
+reasonable model, the Bayesian calibration will yield archaeologically
+interpretable results.  This is a strong claim.  It can be made
+because the modeling process explicitly specifies the relationship at
+the heart of any successful dating project---the relationship between
+the dated event and the archaeological event of interest.
+
+This model building step is ignored in the ad hoc interpretations,
+which don't specify the relationship of dated events to the
+colonization event.  This can be clearly seen in the recent article by
+[[citet*:wilmshurst11:_high_east_polyn]].
+#+BEGIN_quote
+Our main objective is to establish the most accurate age, or ages, for
+initial colonization in East Polynesia. To accomplish this, it is
+necessary to be conservative in evaluating the usefulness of
+data. That is, to accept only those dates that (i) are clearly and
+directly linked to cultural activity, (ii) have the fewest intrinsic
+sources of potential error (e.g., from inbuilt age, dietary, or
+postdepositional contamination by old carbon), and (iii) are capable
+of providing a calibration that is close to the “true” age of the
+actual target event (i.e., human activity).  [[citep:wilmshurst11:_high_east_polyn]]
+#+END_quote
+Here, the dates are carefully chosen from a pool of potential dates to
+ensure that they are reliably associated with "cultural activity" (or
+"human activity"), but without regard to how these activities are
+related to the colonization event.
+# [fn::The item (iii) in their list
+# has no obvious meaning and appears to be based, at least in part, on
+# an idiosyncratic and vague definition of accuracy, which is defined as
+# "based on those samples that can provide a date that is the `true' age
+# of the sample within the statistical limits of the date"
+# [[citep:wilmshurst11:_high_east_polyn]]]
+
+Instead of modeling the relationship between the dated events and
+Polynesian colonization, an assumption is made that the early tail of
+the empirical calibrated age distribution of a selected sample of age
+determinations equates to the colonization event.
+[[citet:wilmshurst11:_high_east_polyn]] investigate this tail closely and
+propose two methods related conceptually to the /floruit/
+[[citep:ottoway73:disperson_diagrams]] to estimate the age of the earliest
+human activity represented in the corpus of \rc\space dates.  With the
+sample of \rc\space dates selected from Hawai`i, this method yields a
+range of AD 1219--1266.  But the method does nothing to ensure that
+the human activity represented by the sample has any association with
+the colonization event.  A moment's reflection is enough to convince
+oneself that there are very many samples that could be drawn from a
+population of \rc\space dates for which the early tail of the
+empirical calibrated age distribution will not equate to the
+colonization event.  How can one distinguish which samples do and
+which don't?  [[citet:wilmshurst11:_high_east_polyn]] note that their
+estimates for New Zealand and Rapa Nui coincide with colonization
+estimates derived by other means, but these coincidences carry no
+information about the association between dated events and
+colonization at the other island groups. The ad hoc interpretive
+schemes have no answer for the fundamental question of association.
+The results of their analyses require a leap of faith that the early
+tail of an empirical calibrated date distribution is associated with
+the colonization event. The leap of faith required by this ad hoc
+inferential procedure contrasts strongly with a Bayesian calibration,
+which explicitly models the relationship between dated and target
+events, and which yields a probability distribution for the
+colonization event based on a well-defined and thoroughly tested
+statistical method [[citep:buck96]].
+
+* A Bayesian Estimate of Polynesian Colonization 
+
+A Bayesian model to estimate the Polynesian colonization of Hawai`i
+can be simple.  It establishes two periods, one for the period
+before the islands were colonized by Polynesians and one for the
+period after the colonization event.  If the beginning and end of the
+pre-colonization period are represented by \alpha_pre and \beta_pre,
+respectively, and the beginning and end of the post-colonization
+period likewise represented by \alpha_post and \beta_post, then the
+model can be summarized as follows:
+\begin{equation}
+\infty = \alpha_{pre} > \beta_{pre} = \alpha_{post} > \beta_{post} = 0
+\end{equation} where $>$ means, "is older than" and numbers express
+years before present.  The parameters of interest in this model are
+\beta_pre and \alpha_post, which the model indicates are equal; the
+colonization event simultaneously ended the pre-colonization period
+and began the post-colonization period.  The other two parameters are
+known.  The main Hawaiian Islands are geologically young, 0.4--5 mya,
+but much older than the effective range of the \rc\space method.  The
+age of \alpha_pre is essentially infinite.  Likewise, \beta_post, the
+end of the post-colonization period, is 0 BP, which by convention in
+\rc\space dating is AD 1950 [[citep:stuiver-polach77]].
+
+\rc\space dating material from pre-colonization period deposits is
+rarely, if ever, collected during archaeological excavations.  In
+part, this is due the nature of the "sterile," which in many cases is
+a mineral subsoil that lacks macroscopic organic inclusions.  In other
+situations, such as calcareous beach sand deposits, there is abundant
+organic material but it is not possible to relate its age to the
+overlying cultural deposit or to the colonization event. In caves or
+sinkholes, where natural deposition processes laid down organic
+materials before the onset of cultural deposition, it is sometimes
+possible to distinguish pre-colonization deposits from natural
+post-colonization deposits based on changes in floral and faunal
+materials and the absence of introduced taxa in lower levels of the
+excavations [[citep:burney01:_fossil_eviden_for_diver_biota]].  Mixing of
+deposits is a pervasive problem in many sinkholes, however
+[[citep:athens02:_avifaun_extin_veget_chang_and]].  In contrast,
+paleoenvironmental coring on the older, northern islands of O`ahu and
+Kaua`i has consistently revealed a pattern of sediments with charcoal
+overlying sediments that lack charcoal.  The charcoal in these cores
+has been attributed to human activities because, it is argued, the two
+causes of natural fires---volcanism and lightning strikes---were
+either absent or extremely rare on the northern islands.  Organic
+material from the charcoal-free lower layers of several
+paleoenvironmental cores has been dated, with results that are older
+than the oldest dated materials from archaeological deposits.
+Paleoenvironmental coring investigations on O`ahu Island at Ordy Pond
+yielded a finely divided stratigraphic profile with organic material
+from a charcoal-free stratum near the boundary marking the onset of
+charcoal deposition [[citep:zathens-ward-tuggle-welch99]].  The date on an
+unidentified seed, Beta-83313, is the youngest \rc\space date from a
+pre-colonization period deposit (table \ref{tab:colonization-dates}).
+
+#+CAPTION: \rc\space dates for the pre- and post-colonization periods
+#+LABEL: tab:colonization-dates
+#+ATTR_LaTeX: tabularx width=\textwidth align=llclX placement=[<options>]\footnotesize
+
+#+tblname: dates
+| *Lab. No.*          | *CRA*        | *\theta* | *Material*            | *Source*                                                   |
+|---------------------+--------------+--------+-----------------------+------------------------------------------------------------|
+| *Pre-colonization*  |              |        |                       |                                                            |
+| Beta-83313          | 1120 \pm 60  |      1 | seed                  | [[citep:zathens-ward-tuggle-welch99][66]]                  |
+| *Post-colonization* |              |        |                       |                                                            |
+| Beta-208143         | 580 \pm 40   |      2 | cf. /Ipomoea batatas/ | [[citep:ladefoged05:_introd_of_sweet_potat_in_polyn][362]] |
+| NOSAMS-0809-26      | 690 \pm 35   |      3 | /Artocarpus altilis/  | [[citep:mccoy10:_introd_bread_hawaiian_islan][377]]        |
+| Beta-20852b         | 1330 \pm 230 |      4 | /Aleurites moluccana/ | [[citep:tuggle01:_age_bellow_dune_site_o18]]               |
+| Beta-135126         | 640 \pm 40   |      5 | /Lagenaria siceraria/ | [[citep:williams02:_ecosy_manag_progr_cultur_resour]]      |
+| Beta-233042         | 440 \pm 40   |      6 | /Cordyline fruticosa/ | [[citep:mccoy10:_role_agric_innov_pacif_islan]]            |
+| CAMS-25560          | 1030 \pm 60  |      7 | /Rattus exulans/      | [[citep:zathens-ward-tuggle-welch99][247]]                 |
+
+
+\rc\space dates from the post-colonization period are all on materials
+believed to have been introduced to the islands by Polynesians (table
+\ref{tab:colonization-dates}).  The \rc\space dates chosen for analysis are
+the oldest known for each of the dated materials.  These include: a
+bone of the Polynesian rat, /Rattus exulans/; a nutshell of the
+/kukui/ tree, /Aleurites moluccana/; a charred fragment of a
+tentatively identified sweet potato tuber, /Ipomoea batatas/; wood
+charcoal identified as breadfruit, /Artocarpus altilis/; a piece of
+gourd, /Lagenaria siceraria/; and wood charcoal identified as /k\=\i/,
+/Cordyline fruticosa/.  Barring the rather unlikely possibility that
+one or more of these dated materials was brought to Hawai`i from the
+homeland by the first colonists, they cannot be older than the
+colonization event because they were unknown in Hawai`i during the
+pre-colonization period.  They can be confidently assigned to the
+post-colonization period regardless of the archaeological contexts
+from which they derived.
+
+Analyses of mtDNA indicate that the bones of commensal animals can be
+used to trace human migration patterns in the Pacific
+[[citep:matisoo-smith94:_rat_dna,matisoo-smith98:_human_mobility]].
+Because rats multiply rapidly once introduced to an island they
+provide a visible archaeological signal of colonization.
+Archaeologists have demonstrated that \rc\space dates on rat bones can
+serve as an effective proxy for the age of the colonization event
+[[citep:wilmshurst08:_datin_polyn_new_zealan_pacif]].  In Hawai`i,
+rats introduced by the first Polynesian colonists are believed
+responsible for many of the environmental changes that characterize
+the early post-colonization period
+[[citep:athens02:_avifaun_extin_veget_chang_and]].  There are several
+old rat bone dates from sinkholes on the `Ewa Plain.  The oldest of
+these, CAMS-25560, was collected from Site 5108-F1 [[citep:athens02:_avifaun_extin_veget_chang_and][72]], and was
+pre-treated prior to dating using the XAD resin processing protocol
+[[citep:stafford91:_molecular]].  Apparently, there was no control for the
+possible effects of dietary uptake of carbon depleted in ^{14}C, as
+would be the case if there were a marine component to the rat diet
+[[citep:beavan98:_factor_rats]].  Although [[citet:wilmshurst08:_datin_polyn_new_zealan_pacif][7678]] found no evidence for a
+marine component in the diet of 30 rat bones analyzed from New
+Zealand, [[citet:richards09:_isotop_analy_human_animal_diets]] detected a
+marine influence on the diet of rats at the Hanamiai site.  The
+possibility that such an effect is present in the dated bones from the
+`Ewa Plain can't be discounted.  Thus, the \rc\space age estimate for
+CAMS-25560, along with the other \rc\space age estimates on rat bone
+might be older than their true ages.  If present, however, the
+disjunctions are not great enough to yield implausibly old age
+estimates; all of the \rc\space age estimates on rat bone are likely
+younger than the oldest dated /kukui/ nutshell.
+  
+Nutshells of the /kukui/ tree, /Aleurites moluccana/, are a common
+component of archaeological sites, typically as readily-identifiable
+charred fragments.  Introduced to the islands by Polynesian colonists,
+the tree is now "a conspicuous component of mesic valley vegetation,
+0--700 m, on all of the main islands except Kaho`olawe" [[citep:wagner90][598]].  Its
+presence in small hanging valleys of cliff faces, where the nuts could
+not have dispersed naturally, suggests that the nuts were "sown"
+during traditional Hawaiian times [[citep:ziegler02:_hawaiian_natur_histor_ecolog_evolut][330]].  Most of the \rc\space dates on
+/kukui/ nutshell are relatively recent, but one, Beta-20852b, from
+Layer II of the Bellows Dune Site O18
+[[citep:tuggle01:_age_bellow_dune_site_o18,dye10:_age_o18_site_hawaii]] ,
+is the oldest dated Polynesian introduction.  It was recovered from
+the upper cultural layer of the site and was 700-800 years old when it
+was deposited [[citep:dye10:_age_o18_site_hawaii]].
+
+The sweet potato was introduced to Polynesia from America
+[[citep:yen74:_sweet_potato]] probably in the eleventh to twelfth
+centuries AD [[citep:green05:_sweet_potato]].  It was likely a secondary
+introduction to Hawai`i
+[[citep:hommon76:_format_primit_states_pre_contac_hawaii]]. Material
+identified as carbonized sweet potato tuber is occasionally recovered
+from archaeological sites in Hawai`i.  Two pieces have been dated
+[[citep:ladefoged05:_introd_of_sweet_potat_in_polyn]].  The dated sample
+used in this analysis, Beta-208143, the older of the two, was
+collected from a trench near the seaward edge of the Leeward Kohala
+Field System in the land of Kahua-1.  The sample was tentatively
+identified as sweet potato due to its small size and lack of
+diagnostic characters.
+
+
+According to Hawaiian tradition, breadfruit was also a secondary
+introduction to the islands after the fourteenth century AD [[citep:handy72:native_planters][149--155]].
+The Hawaiian breadfruit, like other breadfruit cultivars in eastern
+Polynesia, is seedless and is propagated vegetatively
+[[citep:zerega04:_compl_origin_bread_morac]]. It has not become
+naturalized in Hawai`i [[citep:wagner90][14]].  It was planted in groves in the Kona Field
+System [[citep:allen04:_bet][215]], but elsewhere plantings tended to be solitary.  Breadfruit
+is not short-lived, so it is rarely dated in archaeological situations
+where the dated event must be closely associated with the target
+event.  The sample included in this analysis, NOSAMS-0809-26, was
+collected from an irrigated pondfield sediment of Layer V at Site
+26086 in Halawa Ahupua`a, North Kohala
+[[citep:mccoy10:_introd_bread_hawaiian_islan]].  In this context the
+sample probably represents secondary deposition of older material
+brought into the pondfield with irrigation water
+[[citep:allen92:_farmin_hawaii_colon_contac]].  It is thus somewhat
+problematic for dating the use of the pondfield sediment in Layer V,
+but the identification as /A. altilis/ ensures that it belongs to the
+post-colonization period and is thus useful for the analysis at hand.
+
+The bottle gourd, /Lagenaria siceraria/, appears to have been
+introduced to Eastern Polynesia from South America along with the
+sweet potato in the eleventh or twelfth century AD
+[[citep:green00:_range_discip_suppor_dual_origin]]. It would thus likely
+have been a secondary introduction to Hawai`i.  Uncharred pieces of
+the gourd are sometimes recovered from dry contexts with good
+preservation.  The sample, Beta-135126, consisted of uncharred gourd
+fragments recovered from the floor of cave Site 50--10--31--21286 at
+Pohakuloa [[citep:williams02:_ecosy_manag_progr_cultur_resour][Fig. 10a]], a high altitude desert used traditionally by bird
+hunters [[citep:athens91:bird_hunters]].  Site 21286 had a sparse deposit;
+the only material collected appears to have been the gourd fragments.
+
+
+The /k\=\i/, /Cordyline terminalis/, is a shrub that was transported
+widely in prehistory [[citep:wagner90][1348]].  The green-leaved variety transported to
+Eastern Polynesia and Hawai`i by Polynesians is sterile, perhaps a
+result of cultural selection in Western Polynesia for "improved
+portability, rhizome flavor or texture, increased ecological tolerance
+or size, or other characteristics that sterility could potentially
+confer" [[citep:hinkle07:_popul_struc_pacif][834]].  The leaves are sometimes recovered from pit ovens and
+the charred wood is occasionally identified in the charcoal from
+fires.  The sample used in this analysis, Beta-233041, was recovered
+from an abandoned taro pondfield in lower Halawa, North Kohala [[citep:mccoy10:_role_agric_innov_pacif_islan][101]].
+
+
+Given the possibility that the rat bone dates from the `Ewa Plain are
+too old due to the uncontrolled effects of a marine component in the
+diet, the model was first calibrated without them, the
+post-colonization period represented by dates on introduced flora.
+This model can then be expressed as in (\ref{eq:no-rat}).  The
+model and data were calibrated with the BCal software package
+[[citep:bcal]].  The posterior probability of the colonization event,
+\alpha_post, has a 95% highest posterior density (HPD) region of AD
+810-1289 and a mode at AD 980 (fig. \ref{fig:no-rat}, \textit{left}).
+
+\begin{equation}
+\infty = \alpha_{pre} > \theta_{1} > \beta_{pre} = \alpha_{post} >
+\theta_{2-6} > \beta_{post} = 0
+\label{eq:no-rat}
+\end{equation}
+
+The estimate yielded by the model of (\ref{eq:no-rat}) is
+relatively imprecise; the oldest date, Beta-20852b on /kukui/
+nutshell, has a standard deviation of 230 \rc\space years and the next
+oldest date, NOSAMS-0809-26 on breadfruit charcoal, is several hundred
+years younger.  The floral evidence for the early end of the
+post-colonization period is, thus, relatively weak and the calibration
+produces a posterior probability for \alpha_post that is skewed to the
+right.
+
+#+CAPTION: [Polynesian colonization of Hawai`i]{Posterior probability for Polynesian colonization of Hawai`i: \textit{left}, estimate based on (\ref{eq:no-rat}), with a 95\% highest posterior density region of AD 810--1289; \textit{right}, posterior probability for Polynesian colonization of Hawai`i based on (\ref{eq:rat}), with a 95\% highest posterior density region of AD 780--1119.}
+#+LABEL: fig:no-rat
+#+ATTR_LaTeX: width=6in
+
+#+call: dated-events-plot[:file two-colonization-dates.pdf](bcal=fig-1) :results file
+
+#+results: dated-events-plot[:file two-colonization-dates.pdf](bcal=fig-1)
+[[file:two-colonization-dates.pdf]]
+
+
+
+If the age of the earliest rat bone from the `Ewa Plain is accepted,
+then the model can be expressed as (\ref{eq:rat}).  The
+addition of earliest rat bone date, CAMS-25560, fills a gap between
+the early date on /kukui/ nutshell and the next-oldest date on
+breadfruit.  When (\ref{eq:rat}) is calibrated with BCal
+the posterior probability of \alpha_post has a 95% HPD region of AD
+780-1119 with a mode at AD 960 (fig. \ref{fig:no-rat}, \textit{right}).
+ 
+\begin{equation}
+\infty = \alpha_{pre} > \theta_{1} > \beta_{pre} = \alpha_{post} >
+\theta_{2-7} > \beta_{post} = 0
+\label{eq:rat}
+\end{equation}
+
+* A Detailed Comparison of Ad-hoc and Model-based Approaches
+    :LOGBOOK:
+    - State "STARTED"    from ""           [2011-07-04 Mon 18:30]
+    :END:
+
+The ad hoc estimate of AD 1219--1266
+[[citep:wilmshurst11:_high_east_polyn]] appears almost certainly to be too
+late.  The probability that AD 1219 is later than the colonization
+event estimated by (\ref{eq:no-rat}) is 0.89, and for the estimate
+yielded by (\ref{eq:rat}) it is greater than 0.99.  One reason for
+this disparity is the ad hoc method used by
+[[citet:wilmshurst11:_high_east_polyn]], which doesn't specify the
+relationships between the dated events and Polynesian colonization of
+Hawai`i.  Another reason is the decision to exclude from analysis
+\rc\space dates whose standard error is greater than ten percent of
+the conventional radiocarbon age.  One casualty of this decision is
+the date on /kukui/ nutshell, Beta-20852b, which is perhaps the oldest
+dated material introduced by Polynesians known from Hawai`i.  The ad
+hoc method cannot sensibly interpret the large standard deviation of
+this age determination, 230 \rc\space years, and the long early tail
+it would create for the probability distributions.  This, however, is a
+failing of the ad hoc method and not of the age determination, which
+carries information about when Polynesians colonized Hawai`i.  It is
+useful, in this light, to compare how this age determination is
+incorporated into the Bayesian analysis.
+
+The first thing to note is that the \rc\space age of the /kukui/
+nutshell is older than the dated seed from the pre-colonization period
+deposit in Ordy Pond.  Because (\ref{eq:no-rat}) and
+(\ref{eq:rat}) both specify that the pre-colonization period is older
+than and abuts the post-colonization period, the Bayesian calibration
+will not consider a scenario in which the true age of the /kukui/
+nutshell is older than the true age of the seed from Ordy pond.  The
+practical effect of this constraint is that the posterior probability
+for \theta_1 will shift to the left and that for \theta_4 will shift
+to the right.  This is illustrated in figure \ref{fig:interpretable},
+which shows the results of an unconstrained calibration of the two
+\rc\space dates in the top two panels, and the Bayesian calibration of
+(\ref{eq:no-rat}) in the bottom two panels.  As can be seen
+in the figure, the posterior probabilities of \theta_1 are similar to
+one another.  In contrast, the posterior probability of \theta_4
+changes dramatically.  The primary mode of AD 860 in the unconstrained
+calibration shifts almost three centuries to AD 1150 in the Bayesian
+calibration.  The 95% HPD region of the unconstrained calibration is
+AD 380--1159; the long left tail of this distribution is anathema to
+the ad hoc interpretation.  The 95% HPD region of \theta_4 in the
+Bayesian calibration is AD 850-1619, a shift of some five centuries.
+The relatively minor changes in the posterior probability of \theta_1
+compared to those of \theta_4 are related directly to the standard
+errors of the age estimates.  The standard error of Beta-83313 is 60
+\rc\space years, about a quarter of the standard error of the age
+determination for Beta-20852b.  The Bayesian calibration exploits the
+lack of confidence in the age determination of Beta-20852b to produce
+results that are archaeologically interpretable.
+
+#+CAPTION: [Stratigraphically inverted \rc\space dates]{Stratigraphically inverted \rc\space dates: /top/, calibration without a Bayesian model; /bottom/, calibration with the Bayesian model of (\ref{eq:no-rat}).}
+#+LABEL: fig:interpretable
+#+ATTR_LaTeX: width=6in
+
+#+call: dated-events-plot[:file interpretable.pdf :height 4](bcal=fig-2) :results file
+
+#+results: dated-events-plot[:file interpretable.pdf :height 4](bcal=fig-2)
+[[file:interpretable.pdf]]
+
+* Other Results of the Model-based Calibration
+    :LOGBOOK:
+    - State "STARTED"    from ""           [2011-07-04 Mon 18:30]
+    :END:
+
+The chronological models developed in (\ref{eq:no-rat}) and
+(\ref{eq:rat}) the BCal software package make it possible to estimate
+the elapsed time between the colonization event and the archaeological
+evidence for the introduction of the dated plants and animals that was
+used as evidence of the post-colonization period.  Table
+\ref{tab:introductions} shows the 67% HPD region for estimates of the
+hiatus between colonization and the introduction of plants and animals
+based on (\ref{eq:rat}).  The introduced materials fall into two
+general categories.  The early introductions /R. exulans/ and
+/A. moluccana/ arrived either with the first colonists or soon after
+the initial colonization event.  In contrast, based on present
+evidence, /I. batatas/, /A. altilis/, /L. siceraria/, and
+/C. fruticosa/ all arrived later, some three to six centuries after
+the colonization event.
+
+#+CAPTION: Archaeological evidence for introduced plants and animals
+#+LABEL: tab:introductions
+#+ATTR_LaTeX: align=lr placement=[<options>]\footnotesize
+
+| *Taxon*               | *Hiatus (years)* |
+|-----------------------+------------------|
+| /Ipomoea batatas/     |         330--499 |
+| /Artocarpus altilis/  |         280--459 |
+| /Aleurites moluccana/ |          10--169 |
+| /Lagenaria siceraria/ |         300--489 |
+| /Cordyline fruticosa/ |         430--619 |
+| /Rattus exulans/      |          10--139 |
+
+
+
+The models of (\ref{eq:no-rat}) and (\ref{eq:rat}) can be extended to
+measure the hiatus between the colonization event and other
+archaeological events of interest.  One example is the hypothesis
+formulated some years ago by
+[[citet:graves95:_polyn_settl_of_hawaiian_archip]] that there was
+likely to be a disparity between the Polynesian discovery of Hawai`i
+and the earliest evidence of colonization recovered by archaeologists.
+Using the model-based Bayesian calibration, a practical test of the
+hypotheis with current data compares the Bayesian colonization date
+estimate with the likely age of the earliest materials in the
+\rc\space dates assembled by [[citet:wilmshurst11:_high_east_polyn]].
+These dates were selected as indicators of human activity and arguably
+represent the full temporal range of activities reliably collected by
+archaeologists.
+
+The disparity between the earliest reliable indicator of human
+activity and the Polynesian colonization event can be estimated by
+adding a third period to either (\ref{eq:no-rat}) or (\ref{eq:rat})
+and populating it with one or more \rc\space age determinations.  In
+this case, the model (\ref{eq:rat}) was augmented by (\ref{eq:activity}).
+Wk-19310 is the oldest \rc\space age determination in the most
+reliable class established by the chronometric hygiene procedure [[citep:wilmshurst11:_high_east_polyn][Table
+S1]] (see table \ref{tab:other-dates}).  It is a piece of
+carbonized fern caudex collected from excavations at Site 4916 in a
+sand dune near the mouth of Polol\=u Valley, Kohala, Hawai`i Island
+[[citep:field08:_polol_valley_hawai_islan]].
+
+#+CAPTION: \rc\space dates for human activity and Layer III at O18
+#+LABEL: tab:other-dates
+#+ATTR_LaTeX: align=llcll placement=[<options>]\footnotesize
+
+#+tblname: dates
+| *Lab. No.*       | *CRA*      | *\theta* | *Material*         | *Source*                                         |
+|------------------+------------+----------+--------------------+--------------------------------------------------|
+| *Human activity* |            |          |                    |                                                  |
+| Wk-19310         | 696 \pm 35 |        8 | cf. fern caudex    | [[citep:field08:_polol_valley_hawai_islan][210]] |
+| *O18, Layer III* |            |          |                    |                                                  |
+| Beta-231220      | 870 \pm 40 |        9 | /Dodonaea viscosa/ | [[citep:dye10:_age_o18_site_hawaii]]             |
+| Beta-231222      | 490 \pm 40 |       10 | /Canthium odorata/ | [[citep:dye10:_age_o18_site_hawaii]]             |
+| Beta-248818      | 820 \pm 40 |       11 | Pearl shell        | [[citep:dye10:_age_o18_site_hawaii]]             |
+| Beta-248819      | 840 \pm 40 |       12 | Pearl shell        | [[citep:dye10:_age_o18_site_hawaii]]             |
+| Beta-248820      | 790 \pm 40 |       13 | Pearl shell        | [[citep:dye10:_age_o18_site_hawaii]]             |
+
+
+\begin{equation}
+\beta_{pre} > \alpha_{activity} > \theta_{8} > \beta_{activity}
+\label{eq:activity}
+\end{equation}
+     
+The results of calibration with BCal [[citep:bcal]] indicate that, based
+on the model and data of (\ref{eq:rat}) and (\ref{eq:activity}), the
+67% HPD region for the disparity between the colonization event and
+the first archaeological evidence of human activity is 110--369 years;
+the 95% HPD region is 10--459 years (fig. \ref{fig:disparity}, /left/).
+
+#+CAPTION: [Hiatuses between colonization and other events of interest]{Hiatuses between colonization, based on (\ref{eq:rat}), and other events of interest: \textit{left}, human activity, 67% HPD 110-369 years; \textit{right}, establishment of O18, 67% HPD 50-249 years.}
+#+LABEL: fig:disparity
+#+ATTR_LaTeX: width=6in
+
+#+call: dated-interval-plot[:file colonization-disparity.pdf](bcal=fig-3) :results file
+
+#+results: dated-interval-plot[:file colonization-disparity.pdf](bcal=fig-3)
+[[file:colonization-disparity.pdf]]
+
+Perhaps the most practical uses of (\ref{eq:no-rat}) and
+(\ref{eq:rat}) will be to supply an early bound for Bayesian
+calibrations of cultural activity, especially at potentially early
+sites  The Bellows Dune site was recently re-dated by
+[[citet:dye10:_age_o18_site_hawaii]], who modeled the colonization
+event as a normal curve centered at AD 800 and with a standard
+deviation of 50 years.  It is interesting to ask whether the
+colonization age estimate has an effect on the estimated age for
+establishment of O18, and to estimate the hiatus between the
+colonization event and establishment of the site.  This can be
+accomplished by augmenting either (\ref{eq:no-rat}) or (\ref{eq:rat})
+with (\ref{eq:o18}), which defines a new period with an early
+boundary, \alpha_o18, and a late boundary, \beta_o18, and populating
+it with the \rc\space age determinations on short-lived materials from
+Layer III of the site (table \ref{tab:other-dates}).  Using
+(\ref{eq:rat}) and calibrating with BCal yields a 67% HPD estimate for
+site establishment of AD 1050--1209.  The slight differences between
+this estimate and the estimate published by
+[[citet:dye10:_age_o18_site_hawaii]] are due to the stochastic nature
+of the calibration process; the estimate of site establishment was not
+changed by the new estimate of the colonization event.  An estimate of
+the hiatus between the colonization event and establishment of O18 is
+50--249 years, using the 67% HPD (fig. \ref{fig:disparity}, /right/).
+
+\begin{equation}
+\beta_{pre} > \alpha_{o18} > \theta_{9 \dots 13} > \beta_{o18}
+\label{eq:o18}
+\end{equation}
+
+* Discussion
+    :LOGBOOK:
+    - State "STARTED"    from ""           [2011-07-04 Mon 18:30]
+    :END:
+The estimates of Polynesian colonization produced by the Bayesian
+calibration are based on dated materials from the pre-colonization and
+post-colonization periods.  Dated materials from the pre-colonization
+period recovered by paleoenvironmental investigations yield a terminus
+post quem for the colonization event.  \rc\space dates on materials
+absent during the pre-colonization period and introduced to Hawai`i by
+Polynesian colonists are unambiguously assigned to the
+post-colonization period.  They yield a terminus ante quem for the
+colonization event.  The Bayesian calibration, guided by an explicit
+model that relates the dated events to the archaeological events of
+interest, yields a probability distribution that indicates not only
+when Hawai`i was colonized by Polynesians, but also the level of
+confidence that one might reasonably have in the estimate.
+
+Two calibrations, one with a potentially problematic date on an old
+introduced rat bone from the `Ewa Plan and the other with \rc\space
+dates on introduced flora, were run.  The calibration without the rat
+bone date yields a conservative estimate of the uncertainty in the
+analysis, with a 95% HPD region that spans almost five centuries.  The
+additional information from the potentially problematic old rat bone
+reduces the uncertainty of the estimate to slightly more than three
+centuries.  As can be seen by comparing the shapes of the
+distributions in Figure \ref{fig:no-rat}, the difference is primarily
+at the late end of the estimate.  Adding the rat bone date yields a
+probability distribution that is nearly symmetrical around its mode,
+without the skewing apparent in the posterior probability of the
+estimate based solely on floral remains.  Note that the early end of
+the distribution changes very little with the addition of the rat bone
+date and that the two estimates have very similar modes in the late
+tenth century AD.  The reduction in uncertainty brought about by the
+addition of the rat bone date, without much change in the central
+tendency of the distribution, should hold more generally with the
+addition of new \rc\space dating information.  Instead of the wide
+swings in the estimates yielded historically by ad hoc procedures, a
+model-based approach should yield increasingly precise estimates of
+the colonization event around a stable center as new data become
+available.
+
+An advantage of model-based calibration over ad hoc interpretation of
+\rc\space dating results is that relations between parameters of the
+model are specified and can be interrogated directly.  Comparing the
+earliest dated evidence for a variety of Polynesian introduced
+materials supports traditional historical accounts of
+post-colonization introduction of various cultivated plants
+[[citep:handy72:native_planters][150--151, 189]].  The /kukui/ tree
+and the Polynesian rat appear to have been introduced at the time of
+colonization or very soon thereafter.  The other introduced
+plants---sweet potato, gourd, breadfruit, and /k\=\i/---were, on
+present evidence, introduced some three to six centuries later.  These
+results offer some support for Green's hypothesis that sweet potato
+and gourd were introduced to and spread throughout eastern Polynesia
+together [[citep:green00:_range_discip_suppor_dual_origin]].  They
+might have arrived in Hawai`i at about the same time as breadfruit and
+/k\=\i/.
+
+These results are heavily dependent on the few introduced materials
+that have been dated; larger samples of dated Polynesian introductions
+might well yield older dates.  Archaeologists should select sweet
+potato, gourd, /k\=\i/ or other short-lived introduced material for
+dating whenever possible.  It would also be worthwhile to date
+additional Polynesian rat bones, taking care to control for the
+possible influence of a marine component in the diet.  It is
+potentially significant that rat bones from the lowest levels of the
+sinkholes, which might be expected to yield the oldest dates, have not
+been dated.
+
+A decade ago, [[citet:tuggle01:_age_bellow_dune_site_o18]] observed
+that archaeologists working in Hawai`i were not able to identify an
+example of a colonization period site, and thus that there was a
+disparity between the colonization event and the earliest reliably
+dated evidence of cultural activity.  A few years earlier,
+[[citet:graves95:_polyn_settl_of_hawaiian_archip]] argued that
+evidence for the colonization period was likely to be difficult to
+find, so that archaeologists should expect a disparity of this type.
+Recently, the presence of a disparity has been disputed by archaeologists who
+believe there is none.  [[citet:wilmshurst11:_high_east_polyn]]
+assert, without offering any counter argument, that the argument for
+such a disparity is "no longer reasonable."  However, a comparison of
+the colonization age estimate with the oldest material in their list
+of purportedly reliable dates for human activity in Hawai`i indicates
+a disparity of one to four centuries.  To the extent that the dates
+assembled by [[citet:wilmshurst11:_high_east_polyn]] actually reflect
+the temporal range of confidently identified human activity in Hawai`i
+[[citep:Mulrooney07062011,Wilmshurst07062011]], these results offer
+support for the hypothesis that archaeologists in Hawai`i have not
+managed to identify and reliably date cultural deposits associated
+with the initial voyaging period of Polynesian colonization.
+[[citet:kirchss:_when_did_polyn_settl_hawaii]] has taken a different
+tack.  Based on an ad hoc estimate of the colonization event, he
+suggests that archaeologists have found a colonization era deposit,
+Layer III of the Bellows Dune site, O18.  On present evidence, the O18
+site was established about a century before the earliest evidence
+reported by [[citet:wilmshurst11:_high_east_polyn]], but it post-dates
+the colonization event by about 200 years.  Colonization period sites
+in Hawai`i should yield distinctive faunal assemblages, rich in the
+remains of animals unable to sustain formerly large populations in the
+face of human pressure, as elsewhere in Polynesia.  Such sites appear
+to have escaped discovery in Hawai`i [[citep:dye-steadman90]].
+
+The four Bayesian calibration projects reported here are publicly
+available.  Access to the projects can be gained by sending an email
+message to =c.e.buck@sheffield.ac.uk= with the subject line =Dye
+Hawaii Colonization=.  An account will be set up on the BCal server,
+as necessary, and the projects will be copied to a subdirectory of the
+account named =Dye Hawaii Colonization=.  Detailed instructions can be
+found at http://www.tsdye.com/research/hawaii_colonization.html.
+
+\printbibliography
+
+# LocalWords:  Hawai tex rc paleoenvironmental faunal BCal tableofcontents hoc
+# LocalWords:  listoffigures listoftables citep holsen spriggs anderson pre AMS
+# LocalWords:  alawa artifactual multi untanged citet stratigraphically radioc
+# LocalWords:  steadman polyn wilmshurst datin zealan pacif bcal OxCal floruit
+# LocalWords:  postdepositional Zealand Rapa Nui infty mya BP stuiver polach eq
+# LocalWords:  taxa ahu Kaua Ordy zathens tuggle welch ATTR LaTeX tabularx CRA
+# LocalWords:  textwidth llclX tblname Ipomoea batatas NOSAMS Artocarpus Rattus
+# LocalWords:  altilis Aleurites moluccana Lagenaria siceraria Cordyline caudex
+# LocalWords:  fruticosa exulans kukui mtDNA commensal matisoo Ewa mesic Kaho
+# LocalWords:  olawe wagner hawaii cultivars vegetatively Kona pondfield Halawa
+# LocalWords:  Ahupua Kohala Pohakuloa terminalis HPD quem ki Taxon Polol
+# LocalWords:  printbibliography
+* Other project material                                           :noexport:
+This section contains supporting material for the paper, but does not
+appear in the pdf output.  It contains the graphics routines that
+construct the three figures in the paper, some obsolete fancy tables,
+references accumulated during the project, some now fairly cryptic
+notes that were useful when they were made, and the Org-mode source
+for an auxiliary web site that gives instructions how to access the
+BCal projects described in the paper.
+
+** Graphics
+This section contains two generic plotting routines that read
+comma-separated-value files produced by the [[http://bcal.shef.ac.uk/top.html][BCal]] software package and
+use [[http://www.r-project.org/][R]] to make publication quality plots.  One makes a plot of one or
+more time intervals between two parameters, the other plots the
+calibrated age of one or more events.  The plotting routines take
+Org-mode tables as input.
+ 
+*** Plot Intervals
+#+source: dated-interval-plot
+#+header: :file output.pdf
+#+header: :var bcal = int
+#+header: :var base.font = 11
+#+header: :var theme = "bw"
+#+header: :var xlabel = "Years"
+#+header: :var ylabel = "Probability"
+#+header: :width 6 :height 3
+#+begin_src R :results output graphics
+  library(ggplot2)
+  bcal.df <- data.frame(cal.BP=numeric(0),Posterior.probability=numeric(0),label=character(0))
+  for (i in seq(dim(bcal)[1]))
+    {
+      t <- read.csv(file=bcal[i,1])
+      t <- cbind(t,label=rep(bcal[i,2], dim(t)[1]))
+      bcal.df <- rbind(bcal.df,t)
+    }
+  switch(theme,
+         bw =, BW = theme_set(theme_bw(base_size=base.font)),
+         grey =, gray = theme_set(theme_grey(base_size=base.font)),
+         theme_set(theme_bw(base_size=base.font)))
+  g <-  ggplot(bcal.df, aes(x=cal.BP, y=Posterior.probability))
+  g + geom_bar(stat='identity') + xlab(xlabel) +
+    ylab(ylabel) + facet_wrap(~ label)
+#+end_src
+
+
+#+tblname: int
+| foo | bar |
+
+*** Plot Events
+#+source: dated-events-plot
+#+header: :var bcal=fig-1
+#+header: :file blank.pdf
+#+header: :var base.font = 11
+#+header: :var xlabel = "Calendar Year AD"
+#+header: :var ylabel = "Probability"
+#+header: :var theme = "bw"
+#+header: :width 6 :height 3
+#+begin_src R :results output graphics
+  library(ggplot2)
+  bcal.df <- data.frame(cal.BP=numeric(0),Posterior.probability=numeric(0),label=character(0))
+  for (i in seq(dim(bcal)[1]))
+    {
+      t <- read.csv(file=bcal[i,1])
+      t <- cbind(t,label=rep(bcal[i,2], dim(t)[1]))
+      bcal.df <- rbind(bcal.df,t)
+    }
+  switch(theme,
+         bw =, BW = theme_set(theme_bw(base_size=base.font)),
+         grey =, gray = theme_set(theme_grey(base_size=base.font)),
+         theme_set(theme_bw(base_size=base.font)))
+  g <-  ggplot(bcal.df, aes(x=1950 + cal.BP, y=Posterior.probability))
+  g + geom_bar(stat='identity') + xlab(xlabel) +
+  ylab(ylabel) + facet_wrap(~ label)
+#+end_src
+
+*** Input Tables
+
+These are input tables for the plotting routines.  The first column is
+the name of a file produced by the BCal software package.  The second
+column is the annotation that appears at the top of the plot of those
+data. 
+
+#+tblname: fig-1
+| alpha-post-no-rat.csv   | Flora           |
+| alpha-post-with-rat.csv | Flora and fauna | 
+
+#+tblname: fig-2
+| theta-1-no-model.csv | Theta 1 without model       |
+| theta-4-no-model.csv | Theta 4 without model       |
+| theta-1-no-rat.csv   | Theta 1 with Bayesian model |
+| theta-4-no-rat.csv   | Theta 4 with Bayesian model |
+
+#+tblname: fig-3
+| alpha-activity-and-beta-pre.csv | Human activity       |
+| alpha-o18-and-alpha-post.csv    | Establishment of O18 |
+
+** Tables
+
+These are fancier versions of the tables in the paper, created during
+an early stage of work.  After the decision was made to turn the
+research project into a journal article these tables were abandoned
+for the simpler ones produced by the Org-mode LaTeX exporter.  The
+journal typically reworks tables fairly heavily and the extra
+formatting that these routines apply would eventually be undone.
+
+#+begin_src latex :exports results :results latex
+  \begin{table}[htb!]
+  \centering
+  \footnotesize
+  \caption{\rc dates for the pre-colonization period}
+  \label{tab:pre-colonization}
+  <<booktabs(table=pre-colonization,align="llcll",env="tabular")>>  
+  \end{table}
+ #+end_src
+
+#+begin_src latex :exports results :results latex
+  \begin{table}[htb!]
+  \centering
+  \footnotesize
+  \caption{\rc dates for the post-colonization period}
+  \label{tab:post-colonization}
+  <<booktabs(table=post-colonization,align="llcll",env="tabular")>>  
+  \end{table}
+ #+end_src
+
+** References
+   This is an incomplete list of references cited in the paper.  They
+   were created and managed with Eric Schulte's org-bibtex
+   software. Many of the references in the paper were drawn from a
+   master biblilography and so don't appear here.
+
+*** Environment, Vegetation Change, and Early Human Settlement of the `Ewa Plain: A Cultural Resource Inventory of Naval Air Station, Barbers Point, O`ahu, Hawai`i, Part III: Paleoenvironmental Investigations
+    :PROPERTIES:
+    :TITLE:    Environment, Vegetation Change, and Early Human Settlement of the `Ewa Plain: A Cultural Resource Inventory of Naval Air Station, Barbers Point, O`ahu, Hawai`i, Part III: Paleoenvironmental Investigations
+    :TYPE:     book
+    :AUTHOR:   J. Stephen Athens and Jerome V. Ward and H. David Tuggle and David J. Welch
+    :PUBLISHER: International Archaeological Research Institute
+    :YEAR:     1999
+    :SERIES:   Prepared for Department of the Navy, Pacific Division, Naval Facilities Engineering Command
+    :ADDRESS:  Honolulu
+    :MONTH:    August
+    :NOTE:     With contributions by Dean W. Blinn, Robert H. Cowie, Heidi A. Lennstrom, Gail M. Murakami, and Clark Sherman
+    :CUSTOM_ID: athens99:_envir_veget_chang_early_human
+    :END:
+*** Ecosystem Management Program, Cultural Resources Inventory Survey of Previously Unsurveyed Areas, Redleg Trail Vicinity, U.S. Army Pohakuloa Training Area, Island of Hawai`i, Hawai`i
+    :PROPERTIES:
+    :TITLE:    Ecosystem Management Program, Cultural Resources Inventory Survey of Previously Unsurveyed Areas, Redleg Trail Vicinity, U.S. Army Pohakuloa Training Area, Island of Hawai`i, Hawai`i
+    :TYPE:     book
+    :AUTHOR:   Scott S. Williams
+    :PUBLISHER: Ogden Environmental and Energy Services
+    :YEAR:     2002
+    :SERIES:   Prepared for U.S. Army Engineer District
+    :ADDRESS:  Honolulu
+    :CUSTOM_ID: williams02:_ecosy_manag_progr_cultur_resour
+    :END:
+*** The Role of Agricultural Innovation on Pacific Islands: A Case Study from Hawai'I Island
+     :PROPERTIES:
+     :TITLE:    The Role of Agricultural Innovation on Pacific Islands: A Case Study from Hawai'I Island
+     :TYPE:     article
+     :AUTHOR:   Mark D. McCoy and Michael W. Graves
+     :JOURNAL:  World Archaeology
+     :YEAR:     2010
+     :CUSTOM_ID: mccoy10:_role_agric_innov_pacif_islan
+     :VOLUME:   42
+     :PAGES:    90--107
+     :END:
+[[file:~/Desktop/reprints/McCoy_Graves_2010.pdf][McCoy and Graves paper]]
+
+*** High-precision radiocarbon dating shows recent and rapid initial human colonization of {East Polynesia}
+     :PROPERTIES:
+     :TITLE:    High-precision radiocarbon dating shows recent and rapid initial human colonization of {East Polynesia}
+     :TYPE:     article
+     :AUTHOR:   Janet M. Wilmshurst and Terry L. Hunt and Carl P. Lipo and Atholl J. Anderson
+     :JOURNAL:  Proceedings of the National Academy of Sciences
+     :YEAR:     2011
+     :CUSTOM_ID: wilmshurst11:_high_east_polyn
+     :VOLUME:   108
+     :NUMBER:   5
+     :PAGES:    1815--1820
+     :END:
+
+[[file:~/Desktop/reprints/wilmshurst-late-colonization.pdf][Wilmshurst et al.]]
+
+**** The Class 1 Hawaii portion of their data table
+
+Hawai'i
+1
+Beta-115689
+410
+40
+1
+0
+1
+6
+
+Hawai'i
+1
+Beta-115689
+410
+40
+1
+0
+1
+6
+
+Hawai'i
+1
+Beta-132333
+420
+40
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-155366
+650
+40
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-193986
+330
+30
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-213264
+630
+40
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-213266
+690
+40
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-216003
+540
+50
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-216005
+420
+40
+1
+0
+1
+9
+
+Hawai'i
+1
+Beta-101861
+620
+60
+1
+0
+1
+11
+
+Hawai'i
+1
+Beta-101862
+680
+40
+1
+0
+1
+11
+
+Hawai'i
+1
+Beta-111025
+540
+50
+1
+0
+1
+11
+
+Hawai'i
+1
+Beta-189630
+440
+40
+1
+0
+1
+68
+
+Hawai'i
+1
+Beta-189631
+420
+40
+1
+0
+1
+68
+
+Hawai'i
+1
+Beta-189636
+450
+40
+1
+0
+1
+68
+
+Hawai'i
+1
+Beta-189645
+430
+40
+1
+0
+1
+68
+
+Hawai'i
+1
+Beta-208143
+580
+40
+1
+0
+1
+68
+
+Hawai'i
+1
+Wk-19310
+696
+35
+1
+0
+1
+69
+
+Hawai'i
+1
+Wk-19311
+681
+38
+1
+0
+1
+69
+
+Hawai'i
+1
+Wk-19312
+568
+38
+1
+0
+1
+69
+
+Hawai'i
+1
+Wk-19313
+463
+31
+1
+0
+1
+69
+
+Hawai'i
+1
+Wk-19315
+398
+38
+1
+0
+1
+69
+
+Hawai'i
+1
+Beta-110262
+340
+40
+1
+1
+2
+6
+
+Hawai'i
+1
+Beta-110263
+300
+40
+1
+1
+2
+6
+
+Hawai'i
+1
+Beta-116189
+380
+50
+1
+1
+2
+6
+
+Hawai'i
+5
+NZ-A-10058
+822
+60
+2
+0
+2
+6
+
+Hawai'i
+1
+Beta-110262
+340
+40
+1
+1
+2
+6
+
+Hawai'i
+1
+Beta-110263
+300
+40
+1
+1
+2
+6
+
+Hawai'i
+1
+Beta-116189
+380
+50
+1
+1
+2
+6
+
+*** The Introduction of Sweet Potato in Polynesia: Early Remains in Hawai`i
+     :PROPERTIES:
+     :TITLE:    The Introduction of Sweet Potato in Polynesia: Early Remains in Hawai`i
+     :TYPE:     article
+     :AUTHOR:   Thegn N. Ladefoged and Michael W. Graves and James H. Coil
+     :JOURNAL:  Journal of the Polynesian Society
+     :VOLUME:   114
+     :PAGES:    359--373
+     :YEAR:     2005
+     :CUSTOM_ID: ladefoged05:_introd_sweet_potat_polyn
+     :END:
+Beta-208143, 580 +/- 40, is the oldest dated sweet potato from
+Hawaii.  Identified as cf.  This is a secondary introduction, not
+expected to inform on colonization.
+
+*** Introduction of Breadfruit (\textit{Artocarpus altilis}) to the Hawaiian Islands
+     :PROPERTIES:
+     :TITLE:    Introduction of Breadfruit (\textit{Artocarpus altilis}) to the Hawaiian Islands
+     :TYPE:     article
+     :AUTHOR:   Mark D. McCoy and Michael W. Graves and Gail Murakami
+     :JOURNAL:  Economic Botany
+     :YEAR:     2010
+     :VOLUME:   64
+     :PAGES:    374--381
+     :CUSTOM_ID: mccoy10:_introd_bread_hawaiian_islan
+     :END:
+
+Also a secondary introduction.  NOSAMS-0809-26, 690 +/- 35.  Probably
+should put this one in.
+
+*** Bet-hedging strategies, agricultural change, and unpredictable environments: historical development of dryland agriculture in Kona, Hawaii
+    :PROPERTIES:
+    :TITLE:    Bet-hedging strategies, agricultural change, and unpredictable environments: historical development of dryland agriculture in Kona, Hawaii
+    :TYPE:     article
+    :AUTHOR:   Melinda S. Allen
+    :JOURNAL:  Journal of Anthropological Archaeology
+    :YEAR:     2004
+    :VOLUME:   23
+    :PAGES:    196--224
+    :CUSTOM_ID: allen04:_bet
+    :END:
+*** The Sweet Potato in Oceania: A Reappraisal
+    :PROPERTIES:
+    :TITLE:    The Sweet Potato in Oceania: A Reappraisal
+    :TYPE:     book
+    :EDITOR:   Chris Ballard and Paula Brown and R. Michael Bourke and Tracy Harwood
+    :PUBLISHER: University of Sydney
+    :YEAR:     2005
+    :NUMBER:   56
+    :SERIES:   Oceania Monographs
+    :ADDRESS:  Sydney
+    :CUSTOM_ID: ballard05:_sweet_potat_ocean
+    :BOOKTITLE: The Sweet Potato in Oceania: A Reappraisal
+    :PAGES:    43--62
+    :END:
+*** A Range of Disciplines Support a Dual Origin for the Bottle Gourd in the {P}acific
+    :PROPERTIES:
+    :TITLE:    A Range of Disciplines Support a Dual Origin for the Bottle Gourd in the {P}acific
+    :TYPE:     article
+    :AUTHOR:   Roger C. Green
+    :JOURNAL:  Journal of the Polynesian Society
+    :YEAR:     2000
+    :VOLUME:   109
+    :NUMBER:   2
+    :PAGES:    191--198
+    :CUSTOM_ID: green00:_range_discip_suppor_dual_origin
+    :END:
+*** Population Structure of {P}acific \textit{Cordyline fruticosa} ({L}axmanniaceae) with Implications for Human Settlement of {P}olynesia
+     :PROPERTIES:
+     :TITLE: Population Structure of {P}acific \textit{Cordyline fruticosa} 
+     ({L}axmanniaceae) with Implications for Human Settlement of {P}olynesia
+     :TYPE:     article
+     :AUTHOR:   Anya E. Hinkle
+     :JOURNAL:  American Journal of Botany
+     :YEAR:     2007
+     :VOLUME:   94
+     :NUMBER:   5
+     :PAGES:    823--839
+     :CUSTOM_ID: hinkle07:_popul_struc_pacif
+     :END: 
+[[file:~/Desktop/reprints/hinkle-ti-polynesia.pdf][Hinkle Ti in Polynesia]]
+
+All eastern Polynesian green-leafed ti are sterile.
+*** The distribution of a male sterile form of ti (\textit{Cordyline fruticosa}) in Polynesia: A case for human selection?
+    :PROPERTIES:
+    :TITLE:    The distribution of a male sterile form of ti (\textit{Cordyline fruticosa}) in Polynesia: A case for human selection?
+    :TYPE:     article
+    :AUTHOR:   Anya E. Hinkle
+    :JOURNAL:  Journal of the Polynesian Society
+    :YEAR:     2004
+    :CUSTOM_ID: hinkle04:_polyn
+    :VOLUME:   113
+    :PAGES:    263--290
+    :END:
+*** Complex Origins of Breadfruit (\textit{Artocarpus altilis}, {M}oraceae): Implications for Human Migrations in {O}ceania
+    :PROPERTIES:
+    :TITLE:    Complex Origins of Breadfruit (\textit{Artocarpus altilis}, {M}oraceae): Implications for Human Migrations in {O}ceania
+    :TYPE:     article
+    :AUTHOR:   Nyree J. C. Zerega and Diane Ragone and Timothy J. Motley
+    :JOURNAL:  American Journal of Botany
+    :YEAR:     2004
+    :VOLUME:   91
+    :NUMBER:   5
+    :PAGES:    760--766
+    :CUSTOM_ID: zerega04:_compl_origin_bread_morac
+    :END:
+*** A new chronology for {Pololu Valley, Hawai’i Island}: Occupational history and agricultural development
+     :PROPERTIES:
+     :TITLE:    A new chronology for {Pololu Valley, Hawai’i Island}: Occupational history and agricultural development
+     :TYPE:     article
+     :AUTHOR:   Julie S. Field and Michael W. Graves
+     :JOURNAL:  Radiocarbon
+     :YEAR:     2008
+     :VOLUME:   50
+     :NUMBER:   2
+     :PAGES:    205--222
+     :CUSTOM_ID: field08:_polol_valley_hawai_islan
+     :END:
+
+[[file:~/Desktop/reprints/field_graves_pololu.pdf][Pololu dating article]]
+*** High-precision Dating of Colonization and Settlement in East Polynesia
+    :PROPERTIES:
+    :TITLE:    High-precision Dating of Colonization and Settlement in East Polynesia
+    :TYPE:     article
+    :AUTHOR:   Mara A. Mulrooney and Simon H. Bickler and Melinda S. Allen and Thegn N. Ladefoged
+    :JOURNAL:  Proceedings of the National Academy of Sciences
+    :YEAR:     2011
+    :CUSTOM_ID: mulrooney11:_high_datin_colon_settl_east_polyn
+    :END:
+*** Reply to {M}ulrooney et al.: Accepting Lower Precision Radiocarbon Dates Results in Longer Colonization Chronologies for East Polynesia
+    :PROPERTIES:
+    :TITLE:    Reply to {M}ulrooney et al.: Accepting Lower Precision Radiocarbon Dates Results in Longer Colonization Chronologies for East Polynesia
+    :TYPE:     article
+    :AUTHOR:   Janet M. Wilmshurst and Terry L. Hunt and Carl P. Lipo and Atholl J. Anderson
+    :JOURNAL:  Proceedings of the National Academy of Sciences
+    :YEAR:     2011
+    :CUSTOM_ID: wilmshurst11:_reply_mulroon
+    :END:
+*** When Did the {P}olynesians Settle {H}awai`i?  A Review of 150 Years of Scholarly Inquiry and a Tentative Answer
+    :PROPERTIES:
+    :TITLE:    When Did the {P}olynesians Settle {H}awai`i?  A Review of 150 Years of Scholarly Inquiry and a Tentative Answer
+    :TYPE:     article
+    :AUTHOR:   Patrick V. Kirch
+    :JOURNAL:  Hawaiian Archaeology
+    :YEAR:     in press
+    :CUSTOM_ID: kirchss:_when_did_polyn_settl_hawaii
+    :END:
+** Notes
+The notes here were accumulated as the project took shape over a
+period of several months at the end of 2010 and early 2011.  Like most
+notes, they were helpful at the time but seem somewhat cryptic several
+months later.
+
+*** A first-order model of Hawaiian cultural history
+    - pre-human period, \alpha_1 = inf. bp., \beta_1
+    - Polynesian period, \alpha_2 \beta_2 = 1778
+    - recent period, \alpha_3 = 1778 beta_3 = today
+
+*** Sources for pre-human period
+    - Athens' cores, distinguished by lack of charcoal
+    - Ordy Pond, two dates on a seed and one other sample, earliest
+      calibrated to AD 777-1024 (midpoint AD 900)
+    - See McDermott, Data Recovery for Barber's Point, for other rat
+      bone dates.
+    - Athens Shafter flats, Profile 1, layer VII has kukui nutshell,
+      no kukui below this in section. (page 35)
+    - Athens Shafter flats, pg. 45 of pdf has a useful list of
+      introduced plants.
+    - Pre-human dates from Shafter Flats are way early, not much help.
+    - Athens Kawainui dates, Core B unit IV and lower are too old to
+      be much help.
+    - Kaloko, 1334-1408 cal bp, AD 542-616
+
+
+| Lab. No.    |  CRA | Error | \theta | Provenience                             | Material               | Source                            | Page |
+|-------------+------+-------+--------+-----------------------------------------+------------------------+-----------------------------------+------|
+| Beta-83313  | 1120 |    60 |      1 | Ordy Pond, Core 1, 668 cm bs            | seed                   | [[citep:zathens-ward-tuggle-welch99]] |   66 |
+| Beta-83314  | 1420 |    60 |      2 | Ordy Pond, Core 1, 795 cm bs            | seed                   | [[citep:zathens-ward-tuggle-welch99]] |   66 |
+| Beta-50462  | 1650 |    70 |      3 | `Uko`a Pond, Core 2, 240--250 cm bs     | sediment               | [[citep:athens95:_ukoa_pond]]         |   53 |
+| Beta-50463  | 2180 |    80 |      4 | `Uko`a Pond, Core 2, 271--281 cm bs     | sediment               | [[citep:athens95:_ukoa_pond]]         |   53 |
+| Wk-15982    |  993 |    45 |      5 | PUHO, Core 1, Layer V, 59-60 cm bs      | fibrous plant material | athens07:_paleoenvironment_puho   |   33 |
+| Beta-212425 | 1490 |    40 |      6 | KAHO, Core 2, Layer V, 122.5-123 cm  bs | fibrous plant material | athens06:_paleoenvironment_kaho   |   28 |
+
+*** Sources for Polynesian period
+    - Kukui nutshell from Bellows AD 840-1159, 1 sigma
+    - Rat bone from Athens et al. AO, AD 850-1289, SR 5082
+    - Rat bone, CAMS 25560, AD 892-1160
+
+| Lab. No.       |  CRA | Error | \theta | Provenience             | Material                | Source                                      | Page |
+|----------------+------+-------+--------+-------------------------+-------------------------+---------------------------------------------+------|
+| CAMS-26396     |  990 |    50 |      7 | Site 5094-1             | /Rattus exulans/        | [[citep:zathens-ward-tuggle-welch99]]           |  247 |
+| CAMS-25560     | 1030 |    60 |      8 | Site 5108-1             | /Rattus exulans/        | [[citep:zathens-ward-tuggle-welch99]]           |  247 |
+| CAMS-25561     |  680 |    50 |      9 | Site 5108-1             | /Rattus exulans/        | [[citep:zathens-ward-tuggle-welch99]]           |  247 |
+| SR-5080        |  740 |    50 |     10 | Site 4907D              | /Rattus exulans/        | [[citep:mcdermott00:_Barbers_pt]]               | 4.50 |
+| SR-5082        |  990 |   130 |     11 | Site 4907D              | /Rattus exulans/        | [[citep:mcdermott00:_Barbers_pt]]               | 4.50 |
+| SR-5085        |  650 |    50 |     12 | Site 4917L              | /Rattus exulans/        | [[citep:mcdermott00:_Barbers_pt]]               | 4.50 |
+| Beta-20852b    | 1330 |   230 |     13 | O18                     | /A. moluccana/ nutshell | [[citep:tuggle01:_age_bellow_dune_site_o18]]    |      |
+| Beta-20852a    |  720 |   130 |     14 | O18                     | /A. moluccana/ nutshell | [[citep:tuggle01:_age_bellow_dune_site_o18] |      |
+| NZ-10058       |  822 |    60 |     15 | Maha`ulepu LL49, Unit V | /Rattus exulans/        | [[citep:burney01:_fossil_evidence]]             |  620 |
+| Beta-208143    |  580 |    40 |     16 | Kahua 1, Hawai`i        | cf. /Ipomoea batatas/   | [[citep:ladefoged05:_introd_sweet_potat_polyn]] |  362 |
+| NOSAMS-0809-26 |  690 |    35 |     17 | 50--10--02--26086       | /Artocarpus altilis/    | [[citep:mccoy10:_introd_bread_hawaiian_islan]]  |  377 |
+*** Notes for Pre-human period
+    - Age estimates for this period have been developed by
+      paleoenvironmental studies, they were absent before this
+    - How are pre-human contexts identified?
+
+    - Pre-charcoal in cores from islands in the north without active
+      vulcanism
+
+    - "Pristine" pollen assemblages in cores from the southern islands
+
+    - Lack of introduced fauna useful in places like Maha`ulepu
+      where there were large excavations.
+
+    - All of the contexts identified in these ways could have been
+      laid down after settlement.  Their sensitivity to initial
+      settlement hasn't been rigorously evaluated.
+
+    - No problems with old wood on pre-human dates, it just makes
+      them less useful, this is not an error to worry about
+
+*** Notes for Polynesian period
+      - No problems with old wood on Polynesian period dates, the
+        things themselves are evidence, so no disjunction possible
+
+
+/Artocarpus altilis/, the breadfruit, was introduced to Hawai`i by
+Polynesians but has not become naturalized [[citep:wagner90][14]].  
+
+*** Things to do
+**** DONE Add Athens and Tuggle and Spriggs to discussion of settlement dates
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2011-05-13 Fri 14:09]
+     :END:
+**** DONE Rename thetas on the BCal server projects
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2011-05-14 Sat 20:15]
+     :END:
+**** BCal
+     - first-order, lacked Burney's rat bone date
+     - first-order v-2, added Burney's rat bone date
+     - first-order v-3, rat and kukui dates given outlier probability
+       of 0%
+     - first-order v-4, got rid of PUHO date because it showed as an outlier
+     - first-order v-5, added PUHO date as separate period to compare
+       against colonization date.  At 67% HPD, this deposit formed
+       10-180 years after colonization.  This suggests that
+       palynological data not particularly sensitive to colonization
+     - first-order v-6, turned on outlier probabilities for Polynesian
+       dates.  These can be outliers if there are lab errors.  Deleted
+       KAHO date because this is identified as pre-human based on
+       "pristine" pollen criterion, which the PUHO data shows is not
+       correct.
+
+**** DEFERRED Load Terry's table into the radiocarbon data table [0/1]
+     :LOGBOOK:
+     - State "DEFERRED"   from ""           [2011-06-02 Thu 08:14]
+     :END:
+     - [ ] project = 913
+     - [ ] subproject = 10,000 + reference number
+**** DONE Get Ukoa pond and Ordy pond dates 
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2011-01-10 Mon 10:31]
+  :END:
+[2011-01-09 Sun]
+**** DONE Colonization paper comments 
+  :LOGBOOK:
+  - State "DONE"       from "TODO"       [2011-05-22 Sun 12:15]
+  :END:
+[2011-05-19 Thu]
+[[gnus:nnml:Inbox#fb39d003ab8e6.4dd5244d@hawaii.edu][Email from James M. Bayman: Re: Colonization estimate]]
+**** DONE Add Rolett marine diet for rats citation
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2011-07-04 Mon 14:46]
+     :END:
+Here is the [[file:~/Desktop/reprints/rolett-hanamiai-diets.pdf][Rolett paper on rat diets]].
+
+***** Isotope Analysis of Human and Animal Diets from the {H}anamiai Archaeological Site ({F}rench {P}olynesia)
+      :PROPERTIES:
+      :TITLE:    Isotope Analysis of Human and Animal Diets from the {H}anamiai Archaeological Site ({F}rench {P}olynesia)
+      :TYPE:     article
+      :AUTHOR:   Michael P. Richards and Eric West and Barry Rolett and Keith Dobney
+      :JOURNAL:  Archaeology in Oceania
+      :YEAR:     2009
+      :VOLUME:   44
+      :PAGES:    29--37
+      :CUSTOM_ID: richards09:_isotop_analy_human_animal_diets
+      :END:
+**** DONE Push Hawaii colonization project to megawebservers.com 
+     :LOGBOOK:
+     - State "DONE"       from "TODO"       [2011-07-10 Sun 09:34]
+     :END:
+[2011-06-05 Sun]
+[[file:~/org/tsdye/research.org::*Access%20Calibration%20Projects][Access Calibration Projects]]
+
+*** Places mentioned in text
+    - Pu`u Ali`i, Site H1
+    - Bellows, Site O18
+    - Halawa Dune Site, MO-A1-3
+    - `Ewa Plain, O`ahu
+    - Ordy Pond, O`ahu
+    - Site 5108 on the `Ewa Plain
+    - Leeward Kohala Field System
+    - Kahua-1 Ahupua`a, Kohala
+    - Site 26086, Halawa, N. Kohala
+    - Halawa Ahupua`a, N. Kohala
+    - Site 21286 in Pohakuloa
+    - Pohakuloa
+    - Site 4916 at Pololu
+    - Pololu Valley, Kohala
+
+
+
+
+
+
+** Hawai`i Colonization project access instructions
+    :PROPERTIES:
+    :EXPORT_FILE_NAME: hawaii_colonization.html
+    :END: 
+This page contains instructions for accessing the Bayesian
+calibrations described in "A Model-based Age Estimate for Polynesian
+Colonization of Hawai`i" by Thomas S. Dye.
+
+*** Establish Account and Login
+
+    - Send an email message to c.e.buck@sheffield.ac.uk with the
+       subject =Dye Hawaii Colonization=.  If you do not have an
+       account on the BCal server, you can leave the body of the
+       message blank.  If you do have an account on the BCal server,
+       and you would like the projects copied to a new subdirectory on
+       that account, then put your BCal User code in the body of the
+       email message.
+    - You will receive an email reply with a notification that the
+       projects have been copied and, if needed, the information
+       required to login to an account set up for you on the BCal server
+       (fig. \ref{fig:bcal-home}).
+
+#+CAPTION: The BCal home page.  Note the Login and Tutorial menu selections.
+#+LABEL: fig:bcal-home
+
+[[file:bcal-main.png]]
+
+    - Login to the BCal server with the User code and PIN/Password
+       provided in the email reply (fig. \ref{fig:bcal-login}).
+
+#+CAPTION: The BCal server user login.  Enter the User code and PIN/Password.
+#+LABEL: fig:bcal-login
+
+[[file:bcal-login.png]]
+
+*** Access Calibration Projects
+    - Go to the directory =Hawaii Colonization= by selecting it from
+      the drop-down menu and pressing the =Change= button
+      (fig. \ref{fig:bcal-cd}).
+
+#+CAPTION: Change directory to =Hawaii Colonization=.
+#+LABEL: fig:bcal-cd
+
+[[file:bcal-cd.png]]
+
+    - You will see four projects in the directory:
+      =settlement-no-rat=, =settlement-with-one-rat=, =o18-layer-iii=,
+      and =settlement-activity-disp-2= (fig. \ref{fig:bcal-4-files}).
+
+#+CAPTION: Projects in the Hawaii Colonization directory.
+#+LABEL: fig:bcal-4-files
+
+[[file:bcal-3-files.png]]
+
+*** Explore Results
+
+    - Select the project of interest and press the =Results= button
+      (fig. \ref{fig:bcal-results}).
+
+#+CAPTION: The Results page for the =settlement-no-rat= project.
+#+LABEL: fig:bcal-results
+
+[[file:bcal-results.png]]
+
+    - The left panel of Figure 1 in the paper can be reproduced by
+      selecting =Individual Parameters= (fig. \ref{bcal-results}).
+    - Check the box for the parameter =alpha post=
+      (fig. \ref{fig:bcal-alpha-post}).
+    - Scroll to the bottom of the window and press =Submit=.
+
+#+CAPTION: Selection of =alpha post= from the parameters of the =settlement-no-rat= project.
+#+LABEL: fig:bcal-alpha-post
+
+[[file:bcal-alpha-post.png]]
+
+    - View or modify the graph of the posterior probability
+      distribution (fig. \ref{fig:bcal-graph}).
+
+#+CAPTION: A posterior probability distribution for Hawai`i colonization.
+#+LABEL: fig:bcal-graph
+
+[[file:bcal-graph.png]]
+*** Experiment
+Experiments are best carried out on copies of the original projects.
+This way it is easy to get back to the starting point for a second
+try, if necessary.
+
+   - Make a copy of a project by pressing the =Copy= button
+     (fig. \ref{fig:bcal-3-files}).
+   - You can specify a project name (fig. \ref{fig:bcal-copy}).
+
+#+CAPTION: Specify a new name for the copied project.
+#+LABEL: fig:bcal-copy
+
+[[file:bcal-copy.png]]
+
+You can get an idea of how an experiment might work by comparing
+projects in the =Hawaii Colonization= folder.  
+   - The project =settlement-with-one-rat= was created by copying the
+     project =settlement-no-rat= and adding one rat bone date to the post-colonization period.
+   - The project =settlement-activity-disp-2= was created by copying
+     the =settlement-with-one-rat= project and adding a third period.
+
+The BCal Tutorial is a valuable resource.
