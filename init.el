@@ -4,8 +4,9 @@
   (require 'ess-site)
   (setq ess-ask-for-ess-directory nil))
 
-(setq load-path (cons "~/.emacs.d/src/org/lisp" load-path)) ;; <- adjust
-;; for your system
+(add-to-list 'load-path "~/.emacs.d/src/org/lisp") ;; <- adjust
+(add-to-list 'load-path "~/.emacs.d/src/org") ;; <- adjust
+
 (require 'org-install)
 
 ;; this line only required until the upcomming Org-mode/Emacs24 sync

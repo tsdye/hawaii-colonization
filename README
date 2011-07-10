@@ -14,8 +14,9 @@ figures.
 1. Install the latest version of emacs "Emacs 24" from
    http://savannah.gnu.org/projects/emacs
 
-2. Ensure that a working installation of LaTeX is available on your
-   system.  See [[http://www.ctan.org/]]
+2. Ensure that a working installation of LaTeX, [[http://www.ctan.org/]],
+   is available on your system and that it includes the file
+   [[http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/biblatex.html][biblatex.sty]].
 
 3. Ensure that the following executable is installed on your system
    and in your $PATH
