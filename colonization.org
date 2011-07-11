@@ -47,12 +47,12 @@ sometime late in the first millennium AD.  Two calibrations, one using
 \rc\space dates on floral materials and the other using \rc\space
 dates on floral and faunal materials, indicate that archaeological
 materials yield relatively imprecise estimates of the colonization
-event with 95% highest posterior density regions 3-5 centuries long.
+event with 95% highest posterior density regions 3--5 centuries long.
 Materials introduced to the islands by Polynesians date to two
 periods, one that coincides with the colonization event, and another
-some 3-6 centuries later.  A disparity between colonization
+some 3--6 centuries later.  A disparity between colonization
 and the first reliably dated archaeological evidence of human activity
-is identified and estimated to be 1-4 centuries long.
+is identified and estimated to be 1--4 centuries long.
 
 #+END_abstract
 
@@ -125,7 +125,7 @@ later establishment of the site in the eighth century AD
 [[citep:tuggle01:_age_bellow_dune_site_o18]].  The second attempt
 yielded a stratigraphically consistent set of results that compare
 favorably with other well-dated sites nearby and indicate that the
-site was established in AD 1040-1219, some nine centuries later than
+site was established in AD 1040--1219, some nine centuries later than
 the earliest estimate of its age [[citep:dye10:_age_o18_site_hawaii]].
 Six new AMS dates from contexts near the base of the H\=alawa Dune
 site clearly indicate that the original basis for early settlement
@@ -171,7 +171,7 @@ sequence of thin layers, each of which represents a short interval of
 time, and excavations in limestone sinkholes yielded apparently old
 materials introduced to the islands by Polynesians.  Dates on
 materials from the pre-colonization and post-colonization periods were
-interpreted as supporting a settlement range of AD 700-800 [[citep:athens02:_avifaun_extin_veget_chang_and][57, n. 1]].
+interpreted as supporting a settlement range of AD 700--800 [[citep:athens02:_avifaun_extin_veget_chang_and][57, n. 1]].
 The model-based approach outlined below builds on this approach to
 propose a solution to the problem of when Hawai`i was colonized by
 Polynesians.
@@ -405,7 +405,7 @@ during traditional Hawaiian times [[citep:ziegler02:_hawaiian_natur_histor_ecolo
 Layer II of the Bellows Dune Site O18
 [[citep:tuggle01:_age_bellow_dune_site_o18,dye10:_age_o18_site_hawaii]] ,
 is the oldest dated Polynesian introduction.  It was recovered from
-the upper cultural layer of the site and was 700-800 years old when it
+the upper cultural layer of the site and was 700--800 years old when it
 was deposited [[citep:dye10:_age_o18_site_hawaii]].
 
 The sweet potato was introduced to Polynesia from America
@@ -476,7 +476,7 @@ This model can then be expressed as in (\ref{eq:no-rat}).  The
 model and data were calibrated with the BCal software package
 [[citep:bcal]].  The posterior probability of the colonization event,
 \alpha_post, has a 95% highest posterior density (HPD) region of AD
-810-1289 and a mode at AD 980 (fig. \ref{fig:no-rat}, \textit{left}).
+810--1289 and a mode at AD 980 (fig. \ref{fig:no-rat}, \textit{left}).
 
 \begin{equation}
 \infty = \alpha_{pre} > \theta_{1} > \beta_{pre} = \alpha_{post} >
@@ -510,7 +510,7 @@ addition of earliest rat bone date, CAMS-25560, fills a gap between
 the early date on /kukui/ nutshell and the next-oldest date on
 breadfruit.  When (\ref{eq:rat}) is calibrated with BCal
 the posterior probability of \alpha_post has a 95% HPD region of AD
-780-1119 with a mode at AD 960 (fig. \ref{fig:no-rat}, \textit{right}).
+780--1119 with a mode at AD 960 (fig. \ref{fig:no-rat}, \textit{right}).
  
 \begin{equation}
 \infty = \alpha_{pre} > \theta_{1} > \beta_{pre} = \alpha_{post} >
@@ -564,7 +564,7 @@ calibration shifts almost three centuries to AD 1150 in the Bayesian
 calibration.  The 95% HPD region of the unconstrained calibration is
 AD 380--1159; the long left tail of this distribution is anathema to
 the ad hoc interpretation.  The 95% HPD region of \theta_4 in the
-Bayesian calibration is AD 850-1619, a shift of some five centuries.
+Bayesian calibration is AD 850--1619, a shift of some five centuries.
 The relatively minor changes in the posterior probability of \theta_1
 compared to those of \theta_4 are related directly to the standard
 errors of the age estimates.  The standard error of Beta-83313 is 60
@@ -672,7 +672,7 @@ on the model and data of (\ref{eq:rat}) and (\ref{eq:activity}), the
 the first archaeological evidence of human activity is 110--369 years;
 the 95% HPD region is 10--459 years (fig. \ref{fig:disparity}, /left/).
 
-#+CAPTION: [Hiatuses between colonization and other events of interest]{Hiatuses between colonization, based on (\ref{eq:rat}), and other events of interest: \textit{left}, human activity, 67% HPD 110-369 years; \textit{right}, establishment of O18, 67% HPD 50-249 years.}
+#+CAPTION: [Hiatuses between colonization and other events of interest]{Hiatuses between colonization, based on (\ref{eq:rat}), and other events of interest: \textit{left}, human activity, 67% HPD 110--369 years; \textit{right}, establishment of O18, 67% HPD 50--249 years.}
 #+LABEL: fig:disparity
 #+ATTR_LaTeX: width=6in
 
@@ -1471,7 +1471,7 @@ months later.
 *** Sources for pre-human period
     - Athens' cores, distinguished by lack of charcoal
     - Ordy Pond, two dates on a seed and one other sample, earliest
-      calibrated to AD 777-1024 (midpoint AD 900)
+      calibrated to AD 777--1024 (midpoint AD 900)
     - See McDermott, Data Recovery for Barber's Point, for other rat
       bone dates.
     - Athens Shafter flats, Profile 1, layer VII has kukui nutshell,
@@ -1481,7 +1481,7 @@ months later.
     - Pre-human dates from Shafter Flats are way early, not much help.
     - Athens Kawainui dates, Core B unit IV and lower are too old to
       be much help.
-    - Kaloko, 1334-1408 cal bp, AD 542-616
+    - Kaloko, 1334--1408 cal bp, AD 542--616
 
 
 | Lab. No.    |  CRA | Error | \theta | Provenience                             | Material               | Source                            | Page |
@@ -1490,13 +1490,13 @@ months later.
 | Beta-83314  | 1420 |    60 |      2 | Ordy Pond, Core 1, 795 cm bs            | seed                   | [[citep:zathens-ward-tuggle-welch99]] |   66 |
 | Beta-50462  | 1650 |    70 |      3 | `Uko`a Pond, Core 2, 240--250 cm bs     | sediment               | [[citep:athens95:_ukoa_pond]]         |   53 |
 | Beta-50463  | 2180 |    80 |      4 | `Uko`a Pond, Core 2, 271--281 cm bs     | sediment               | [[citep:athens95:_ukoa_pond]]         |   53 |
-| Wk-15982    |  993 |    45 |      5 | PUHO, Core 1, Layer V, 59-60 cm bs      | fibrous plant material | athens07:_paleoenvironment_puho   |   33 |
-| Beta-212425 | 1490 |    40 |      6 | KAHO, Core 2, Layer V, 122.5-123 cm  bs | fibrous plant material | athens06:_paleoenvironment_kaho   |   28 |
+| Wk-15982    |  993 |    45 |      5 | PUHO, Core 1, Layer V, 59--60 cm bs      | fibrous plant material | athens07:_paleoenvironment_puho   |   33 |
+| Beta-212425 | 1490 |    40 |      6 | KAHO, Core 2, Layer V, 122.5--123 cm  bs | fibrous plant material | athens06:_paleoenvironment_kaho   |   28 |
 
 *** Sources for Polynesian period
-    - Kukui nutshell from Bellows AD 840-1159, 1 sigma
-    - Rat bone from Athens et al. AO, AD 850-1289, SR 5082
-    - Rat bone, CAMS 25560, AD 892-1160
+    - Kukui nutshell from Bellows AD 840--1159, 1 sigma
+    - Rat bone from Athens et al. AO, AD 850--1289, SR 5082
+    - Rat bone, CAMS 25560, AD 892--1160
 
 | Lab. No.       |  CRA | Error | \theta | Provenience             | Material                | Source                                      | Page |
 |----------------+------+-------+--------+-------------------------+-------------------------+---------------------------------------------+------|
@@ -1556,7 +1556,7 @@ Polynesians but has not become naturalized [[citep:wagner90][14]].
      - first-order v-4, got rid of PUHO date because it showed as an outlier
      - first-order v-5, added PUHO date as separate period to compare
        against colonization date.  At 67% HPD, this deposit formed
-       10-180 years after colonization.  This suggests that
+       10--180 years after colonization.  This suggests that
        palynological data not particularly sensitive to colonization
      - first-order v-6, turned on outlier probabilities for Polynesian
        dates.  These can be outliers if there are lab errors.  Deleted
