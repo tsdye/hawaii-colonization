@@ -9,7 +9,7 @@ colonization.tex: colonization.org
 
 colonization.pdf: colonization.tex
 	rm -f colonization.aux 
-	if pdflatex colonization.tex </dev/null; then \
+	if pdflatex --shell-escape colonization.tex </dev/null; then \
 		true; \
 	else \
 		stat=$$?; touch colonization.pdf; exit $$stat; \
