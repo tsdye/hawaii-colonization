@@ -26,7 +26,10 @@ relevant calculations, and generating the referenced figures.
    and in your $PATH
    - R http://www.r-project.org/
 
-4. Emacs Speaks Statistics (ESS) provides support for communication
+4. Your R installation must include the ggplot2 package,
+   http://had.co.nz/ggplot2/
+
+5. Emacs Speaks Statistics (ESS) provides support for communication
    between Emacs and a persistent R process. To install ESS download
    the source code from http://ess.r-project.org/ -- this paper was
    tested with version 5.13.  Unpack the download into a directory on
@@ -34,20 +37,20 @@ relevant calculations, and generating the referenced figures.
    of init.el in this directory to point to your local ess/lisp/
    directory.
 
-5. Alternatively, follow steps 6 through 9 or call make from within
+6. Alternatively, follow steps 6 through 9 or call make from within
    the directory that holds colonization.org.
 
-6. From the command line, cd into the directory that holds colonization.org
+7. From the command line, cd into the directory that holds colonization.org
    and then launch Emacs using the following command
    
    : emacs -Q -l init.el colonization.org
 
-7. The resulting Emacs window will be visiting the Org-mode file,
+8. The resulting Emacs window will be visiting the Org-mode file,
    colonization.org.  From here it is possible to navigate and edit the
    document, and to inspect and evaluate source code blocks.
 
-8. Export the document to LaTeX with the M-x org-export-as-latex
+9. Export the document to LaTeX with the M-x org-export-as-latex
    command---just press RET in reply to queries from R.
 
-9. The resulting colonization.tex file can be built from the command line
+10. The resulting colonization.tex file can be built from the command line
    with pdflatex and bibtex.
