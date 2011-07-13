@@ -394,7 +394,7 @@ estimates; all of the \rc\space age estimates on rat bone are likely
 younger than the oldest dated /kukui/ nutshell.
   
 Nutshells of the /kukui/ tree, /Aleurites moluccana/, are a common
-component of archaeological sites, typically as readily-identifiable
+component of archaeological sites, typically as readily identifiable
 charred fragments.  Introduced to the islands by Polynesian colonists,
 the tree is now "a conspicuous component of mesic valley vegetation,
 0--700 m, on all of the main islands except Kaho`olawe" [[citep:wagner90][598]].  Its
@@ -588,14 +588,14 @@ results that are archaeologically interpretable.
     :END:
 
 The chronological models developed in (\ref{eq:no-rat}) and
-(\ref{eq:rat}) the BCal software package make it possible to estimate
-the elapsed time between the colonization event and the archaeological
-evidence for the introduction of the dated plants and animals that was
-used as evidence of the post-colonization period.  Table
-\ref{tab:introductions} shows the 67% HPD region for estimates of the
-hiatus between colonization and the introduction of plants and animals
-based on (\ref{eq:rat}).  The introduced materials fall into two
-general categories.  The early introductions /R. exulans/ and
+(\ref{eq:rat}) using the BCal software package make it possible to
+estimate the elapsed time between the colonization event and the
+archaeological evidence for the introduction of the dated plants and
+animals that was used as evidence of the post-colonization period.
+Table \ref{tab:introductions} shows the 67% HPD region for estimates
+of the hiatus between colonization and the introduction of plants and
+animals based on (\ref{eq:rat}).  The introduced materials fall into
+two general categories.  The early introductions /R. exulans/ and
 /A. moluccana/ arrived either with the first colonists or soon after
 the initial colonization event.  In contrast, based on present
 evidence, /I. batatas/, /A. altilis/, /L. siceraria/, and
