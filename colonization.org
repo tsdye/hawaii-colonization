@@ -98,7 +98,7 @@ chronological model.
 Early \rc\space -based estimates of Polynesian colonization of Hawai`i
 were framed in the context of arguments for the ages of purportedly
 early sites.  Arguments for an early establishment of three coastal
-sites were made, including: Pu`u Ali`i, Site H1
+sites were made, including Pu`u Ali`i, Site H1
 [[citep:emory69:age_of_sites]]; Bellows, Site O18
 [[citep:pearson71:_bellows]]; and the H\=alawa Valley Dune, Site
 MO-A1-3 [[citep:kirch-kelly75:halawa]], which was interpreted as
@@ -349,7 +349,7 @@ pre-colonization period deposit (table \ref{tab:colonization-dates}).
 \rc\space dates from the post-colonization period are all on materials
 believed to have been introduced to the islands by Polynesians (table
 \ref{tab:colonization-dates}).  The \rc\space dates chosen for analysis are
-the oldest known for each of the dated materials.  These include: a
+the oldest known for each of the dated materials.  These include a
 bone of the Polynesian rat, /Rattus exulans/; a nutshell of the
 /kukui/ tree, /Aleurites moluccana/; a charred fragment of a
 tentatively identified sweet potato tuber, /Ipomoea batatas/; wood
