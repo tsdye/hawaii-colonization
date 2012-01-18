@@ -1,5 +1,5 @@
 #+TITLE:     A Model-based Age Estimate for Polynesian Colonization of Hawai`i
-#+AUTHOR:    Thomas S. Dye
+#+Author:    Thomas S. Dye
 #+EMAIL:     tsd@tsdye2.com
 #+DESCRIPTION: 
 #+KEYWORDS: 
@@ -338,7 +338,7 @@ pre-colonization period deposit (table \ref{tab:colonization-dates}).
 | *Pre-colonization*  |              |        |                       |                                                            |
 | Beta-83313          | 1120 \pm 60  |      1 | seed                  | [[citep:zathens-ward-tuggle-welch99][66]]                  |
 | *Post-colonization* |              |        |                       |                                                            |
-| Beta-208143         | 580 \pm 40   |      2 | cf. /Ipomoea batatas/ | [[citep:ladefoged05:_introd_of_sweet_potat_in_polyn][362]] |
+| Beta-208143         | 580 \pm 40   |      2 | cf. /Ipomoea batatas/ | [[citep:ladefoged05:_introd_of_sweet_potat_in_plyn][362]]  |
 | NOSAMS-0809-26      | 690 \pm 35   |      3 | /Artocarpus altilis/  | [[citep:mccoy10:_introd_bread_hawaiian_islan][377]]        |
 | Beta-20852b         | 1330 \pm 230 |      4 | /Aleurites moluccana/ | [[citep:tuggle01:_age_bellow_dune_site_o18]]               |
 | Beta-135126         | 640 \pm 40   |      5 | /Lagenaria siceraria/ | [[citep:williams02:_ecosy_manag_progr_cultur_resour]]      |
@@ -853,7 +853,7 @@ calibrated age of one or more events.  The plotting routines take
 Org-mode tables as input.
  
 *** Plot Intervals
-#+source: dated-interval-plot
+#+name: dated-interval-plot
 #+header: :file output.pdf
 #+header: :var bcal = int
 #+header: :var base.font = 11
@@ -884,7 +884,10 @@ Org-mode tables as input.
 | foo | bar |
 
 *** Plot Events
-#+source: dated-events-plot
+    :PROPERTIES:
+    :ID:       A1FC81C3-565D-402F-B91A-A24073E6023D
+    :END:
+#+name: dated-events-plot
 #+header: :var bcal=fig-1
 #+header: :file blank.pdf
 #+header: :var base.font = 11
